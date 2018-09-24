@@ -1,0 +1,22 @@
+{
+  "name": "graphql-binding-example",
+  "version": "1.0.0",
+  "description": "Local GraphQL Server binding",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node ./src/binding/usage.ts",
+    "get-schema-for-binding": "get-graphql-schema http://localhost:4000 > ./src/binding/generated/schema.graphql",
+    "generate-binding": "graphql-binding --input ./src/binding/schema.ts --language typescript --outputBinding ./src/binding/generated/binding.ts"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-link-http": "1.5.5",
+    "cross-fetch": "^2.2.2",
+    "graphql": "0.13.2",
+    "graphql-binding": "^2.2.5",
+    "graphql-tools": "^4.0.0",
+    "graphql-yoga": "^1.16.2",
+    "node-fetch": "^2.2.0"
+  }
+}
